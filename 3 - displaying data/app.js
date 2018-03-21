@@ -1,13 +1,30 @@
-
-document.body.onload = ()=>{displayData(person)};
+document.body.onload = () => {
+   displayData(person)
+};
 
 let person = {
-  name:"race",
-  age:25,
-  city:"Phoenix"
+   name: "race",
+   age: 25,
+   city: "Phoenix"
 }
+let theElement = [];
+let theList = "";
 
 function displayData(data) {
-  // Use the data that you take in to create an unordered list containing the persons information.
-  // your code here
+   var newElement = document.getElementById("enter");
+   var newList = newElement.value;
+   theElement.push(newList);
+   theList += "<li>" + theElement + "</li>";
+   document.getElementById("newElement").innerHTML = "";
+   for (var i = 0; i < names.length; i++) {
+      theList = "<li>" + theElement[i] + "</li>";
+      document.getElementById("newElement").innerHTML += theList;
+   }
+
 }
+
+// Use the data that you take in to create an unordered list containing the persons information.
+// your code here
+
+//var newList = document.createElement("ul");
+//var newElement = document.createElement("li");
