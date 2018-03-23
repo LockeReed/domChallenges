@@ -21,17 +21,15 @@ let pokemonToAdd = [{
 
 function addPokemon(data) {
    var table = document.getElementById('theTable');
-   var row = table.insertRow(3);
-   var cell1 = row.insertCell(0);
-   var cell2 = row.insertCell(1);
-   var cell3 = row.insertCell(2);
-   cell1.innerHTML = "1";
-   cell2.innerHTML = "2";
-   cell3.innerHTML = "3";
-   for (let i = 0; i < pokemonToAdd.length; i++) {
-      pokemonToAdd[i].id = cellId;
-      pokemonToAdd[i].name = cellName;
-      pokemonToAdd[i].type = cellType;
+
+   for (let i = 0; i < data.length; i++) {
+      var row = table.insertRow(3);
+      var cell1 = row.insertCell(0);
+      var cell2 = row.insertCell(1);
+      var cell3 = row.insertCell(2);
+      cell1.innerHTML = data[i].id;
+      cell2.innerHTML = data[i].name;
+      cell3.innerHTML = data[i].type;
    }
    /*var table = document.getElementById('theTable');
    var row = table.insertRow(3);
